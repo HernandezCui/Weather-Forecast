@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.dashboard-text {
+    text-align: center;
+}
+
+.search-container {
+    text-align: left;
+    justify-content: left;
+    margin-top: 100px;
+}
+
