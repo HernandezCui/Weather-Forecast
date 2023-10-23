@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Forecast</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1 class="dashboard-text">Weather Dashboard</h1>
+        <div class="search-container">
+            <label for="cityInput">Search for City</label>
+            <input type="text" id="cityInput" placeholder="Enter City"> 
+            <button id="searchBtn">Search</button>
+        </div>
+    <!-- display search history -->
+    <div class="search-history"></div>
+    <div class="weather-display">
+        <div class="current-weather"></div>
+        <!-- display 5-day forecast -->
+        <div class="forecast">
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
+
 </html>
