@@ -17,7 +17,32 @@ body {
 
 .search-container {
     text-align: left;
-    justify-content: left;
     margin-top: 100px;
 }
 
+label {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    width: 200px;
+}
+
+.search-history {
+    margin-top: 20px;
+}
+
+.weather-display {
+    margin-top: 20px;
+}
+
+.current-weather {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.forecast {
+    background-color: #ffffff;
+    padding: 20px;
+}
