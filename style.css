@@ -1,11 +1,61 @@
-/* * {
-    /* font-family: Arial, sans-serif;
-    background-color: #f0f0f0; */
-    /* margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-} */ 
-/* 
+html {
+    overflow-x: hidden;
+}
+
+/* Body */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}  
+
+/* header */
+.page-header {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: block;
+    background: linear-gradient(to right, rgb(27,118,236), rgb(86,11,156));
+    color: white;
+    padding: 15px 0 15px 0;
+}
+
+hr {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.search-city {
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.search-history {
+    margin-left: 25px;
+}
+
+.search-btn {
+    color: white;
+    margin-top: 20px;
+
+}
+
+.history-btn {
+    background-color: grey;
+    color: black;
+}
+
+.current-weather {
+    border-style: solid;
+    margin-top: 30px;
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+
+
+
+
+/*
 .container {
     max-width: 800px;
     margin: 0px auto;
