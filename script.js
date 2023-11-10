@@ -57,7 +57,21 @@ function getForecastData(city) {
     });
 }
 
+// function to add city to searh history 
+function addToSearchHistory(city) {
+    const listItem = $('<li class="list-group-item border-0>');
+    const historyButton = $('<button class="btn history-btn w-100" type="button">');
+    historyButton.text(city);
+    listItem.append(histoyButton);
+    searchHistory.append(listItem);
 
+// Event listener to search history 
+    historyButton.on('click', function() {
+        const cityName = $(this).text();
+        getWeatherData(cityName);
+        getForecastData(cityName);
+    });
+}
 
 
 
