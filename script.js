@@ -73,13 +73,17 @@ function addToSearchHistory(city) {
     });
 }
 
-
-
-
-
-
-
-
+ // Event listener for the search button
+    searchForm.on('submit', function(event) {
+        event.preventDefault();
+        const city = cityInput.val();
+        if (city) {
+            getWeatherData(city);
+            getForecastData(city);
+            addToSearchHistory(city);
+            cityInput.val('');
+    }
+  });
 });
 
 
