@@ -19,6 +19,13 @@ document.getElementById("searchbtn").addEventListener("click", function (event) 
     }
 });
 
+// Event listener for search history 
+document.getElementById("searchCity").addEventListener("click", function (event) {
+    if (event.target.classList.contains("history-btn")) {
+        const city = event.target.textContent;
+        getWeather(city);
+    }
+}); 
 
 
 
