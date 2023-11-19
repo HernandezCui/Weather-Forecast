@@ -27,5 +27,12 @@ document.getElementById("searchCity").addEventListener("click", function (event)
     }
 }); 
 
+// function to fetch weather API data
+function getWeather(city) {
+    const currentWeatherUrl = ``;
+    const forecastUrl = ``;
+
+    
+}
 
 
