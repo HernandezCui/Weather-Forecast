@@ -57,3 +57,28 @@ function updateCurrentWeather(data) {
       </div>
   `;
 }
+
+
+// Update UI with 5-day forecast data
+function updateForecast(data) {
+  forecastDiv.innerHTML = '';
+
+  for (let i = 0; i < data.list.length; i += 8) {
+      const forecastData = data.list[i];
+      const date = formatDate(forecastData.dt_txt);
+
+      forecastDiv.innerHTML += `
+          <div class="col-sm-2">
+              <div class="card">
+                  <div class="card-section">
+                      <h5 class="card-title future-date-${i}">${date}</h5>
+                      <img id="future-icon-${i}" src="" alt="">
+                      <p class="card-info future-temperature-${i}">Temperature: ${kelvinToCelsius(forecastData.main.temp)}°C</p>
+                      <p class="card-info future-wind-${i}">Wind: ${forecastData.wind.speed} m/s</p>
+                      <p class="card-info future-humidity-${i}">Humidity: ${forecastData.main.humidity}%</p>
+                  </div>
+              </div>
+          </div>
+      `;
+  }
+}
