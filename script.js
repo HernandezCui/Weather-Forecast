@@ -45,7 +45,7 @@ function updateCurrentWeather(data) {
   currentWeatherDiv.innerHTML = `
       <div class="row">
           <div class="col-sm-4">
-              <h3 class="city-result">${data.name} (${getCurrentDate()}) <img id="current-weather-icon" class="d-inline" src="" alt=""></h3>
+              <h3 class="city-result">${data.name} (${getCurrentDate()}) <img id="current-weather-icon" class="d-inline" src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt=""></h3>
           </div>
       </div>
       <div class="row">
@@ -72,7 +72,7 @@ function updateForecast(data) {
               <div class="card">
                   <div class="card-section">
                       <h5 class="card-title future-date-${i}">${date}</h5>
-                      <img id="future-icon-${i}" src="" alt="">
+                      <img id="future-icon-${i}" src="http://openweathermap.org/img/wn/${forecastData.weather[0].icon}.png" alt="">
                       <p class="card-info future-temperature-${i}">Temperature: ${kelvinToCelsius(forecastData.main.temp)}°C</p>
                       <p class="card-info future-wind-${i}">Wind: ${forecastData.wind.speed} m/s</p>
                       <p class="card-info future-humidity-${i}">Humidity: ${forecastData.main.humidity}%</p>
