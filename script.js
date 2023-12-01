@@ -1,4 +1,4 @@
-const apiKey = '7b25c2abcd02f063202b03c9975aa808';
+const apiKey = `7b25c2abcd02f063202b03c9975aa808`;
 const searchForm = document.getElementById('search-form');
 const cityInput = document.getElementById('cityInput');
 const searchedCityList = document.getElementById('searchedCity');
@@ -17,10 +17,29 @@ searchForm.addEventListener('submit', function (e) {
   }
 });
 
+// function to fetch weather data
+function fetchWeatherData(city) {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+          // Update current weather UI
+          updateCurrentWeather(data);
+          // Add city to search history
+          addToSearchHistory(city);
+      })
+      .catch(error => console.error('Error fetching current weather:', error));
 
-
-
-
+ // Fetch 5-day forecast
+ const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+ fetch(forecastUrl)
+     .then(response => response.json())
+     .then(data => {
+         // Update forecast UI
+         updateForecast(data);
+     })
+     .catch(error => console.error('Error fetching forecast:', error));
+}
 
 
 
