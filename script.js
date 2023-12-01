@@ -96,3 +96,23 @@ function addToSearchHistory(city) {
       fetchWeatherData(city);
   });
 }
+
+// function to get date of weather
+function getCurrentDate() {
+  const currentDate = new Date();
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1; // Months are zero-based
+  const year = currentDate.getFullYear();
+  return `${month}/${day}/${year}`;
+}
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const day = date.getDate();
+  const month = date.getMonth() + 1; // Months are zero-based
+  return `${month}/${day}`;
+}
+
+function kelvinToCelsius(kelvin) {
+  return (kelvin - 273.15).toFixed(2);
+}
