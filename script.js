@@ -85,6 +85,12 @@ function updateForecast(data) {
 
 // function for search history 
 function addToSearchHistory(city) {
+  // Check if the city is already in the search history
+  const existingCities = Array.from(searchedCityList.children).map(item => item.innerText.toLowerCase());
+  const lowercaseCity = city.toLowerCase();
+
+  if (!existingCities.includes(lowercaseCity)) {
+
   const listItem = document.createElement('li');
   listItem.className = 'list-group-item border-0';
   listItem.innerHTML = `<button class="btn history-btn w-100" type="button">${city}</button>`;
@@ -94,7 +100,8 @@ function addToSearchHistory(city) {
   const cityButton = listItem.querySelector('button');
   cityButton.addEventListener('click', function () {
       fetchWeatherData(city);
-  });
+    });
+  }
 }
 
 // function to get date of weather
