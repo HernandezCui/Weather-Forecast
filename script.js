@@ -6,7 +6,16 @@ const currentWeatherDiv = document.querySelector('.current-weather');
 const forecastDiv = document.getElementById('forecast');
 
 
+// search form event listener
+searchForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const city = cityInput.value.trim();
 
+  if (city) {
+      fetchWeatherData(city);
+      cityInput.value = '';
+  }
+});
 
 
 
